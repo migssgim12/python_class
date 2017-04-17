@@ -1,0 +1,16 @@
+Increment Operator and String Building
+Increment operator - # +=
+counter - 0 # Initialize the counter
+||||
+counter += 1 # Click.
+print(counter)
+*1*
+counter += 3 # Add three more
+message = ''
+message += '11'
+Inline Variable assignment
+a=1
+b=7
+a, b, c, d, e = (1, 7, 3,  6, 5) #tuple
+print (a, b, c, d, e)
+*1 7 3 6 5
