@@ -6,3 +6,7 @@ git checkout master
 delete the branch again
 git branch -d feature_x
 git merge 
+git ignore
+
+Pycharm - you can put a #TODO 
+

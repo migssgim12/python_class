@@ -8,7 +8,7 @@ import random
 
 
 def roll(dice, sides):
-    for i in range(dice): #
+    for i in range(dice):  #
         roll = random.randint(1, sides)
         print(roll)
 
@@ -17,5 +17,6 @@ def gather_input():
     dice = int(input('How many dice do you want?  >>'))
     sides = int(input('How many sides?  >>'))
     roll(dice, sides)
+
 
 gather_input()

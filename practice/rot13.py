@@ -20,7 +20,7 @@ oevat gurz urer gb fjvz. Jura gurl'er qbar gurl whzc onpx vagb gur ohpxrg."
         swaparoo = message
         print(i)
 
-
+decrypt(0)
 """
 
 """
