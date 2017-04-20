@@ -30,4 +30,18 @@ def exclude_em(listy, inty=None):
 
     return result
 
+def double(a,b):
+    result = []
+    for a, b in zip(a, b):
+        if a == 0 or b == 0:
+            c = -1
+            result.append(c)
+        else:
+            result.append(a * b)
+    return result
 
+def punch_in(list1, list2, inty):
+    for i in list1:
+        list1.insert([i], list2)
+        result = list1
+    return list
