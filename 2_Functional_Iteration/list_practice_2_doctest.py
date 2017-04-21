@@ -41,7 +41,7 @@ def double(a,b):
     return result
 
 def punch_in(list1, list2, inty):
-    for i in list1:
-        list1.insert([i], list2)
-        result = list1
-    return list
+    for i in list2:
+        list1.insert(inty, i)
+        inty += 1
+    return list1
