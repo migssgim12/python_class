@@ -1,4 +1,6 @@
 import random
+import pyglet
+
 
 answer = True
 no_responses = ('no', 'nah', 'nope', 'no', '',)

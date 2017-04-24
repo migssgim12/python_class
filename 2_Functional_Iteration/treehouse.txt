@@ -1,0 +1,3 @@
+Day 9/ 10 notes Treehouse and Python
+
+semicolon is to seperate two staements that are normally on the same line
