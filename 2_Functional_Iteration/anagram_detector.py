@@ -20,7 +20,7 @@ def clean(word):
     word = word.lower()
     # clean_string = []
     # for char in word:
-    #     if char not in string.punctuation and char not in string.whitespace:
+    #     if char in string.ascii_letters
     #         clean_string.append(char)
     #
     clean_string = [char for char in word.lower() if char in string.ascii_letters] # list comprehension
