@@ -21,7 +21,7 @@ Define the following functions:
 
 1. `peaks_and_valleys` - uses the above two functions to compile a single list of the peaks and valleys in order of appearance in the original data.
 
-1. `chop` - uses the aboce functions to generate a data structure: a list of lists, each list representing a single "slope" or area from peak to valley (terminally inclusive).
+1. `chop` - uses the above functions to generate a data structure: a list of lists, each list representing a single "slope" or area from peak to valley (terminally inclusive).
 
 Here is a reference of the test data:
 
