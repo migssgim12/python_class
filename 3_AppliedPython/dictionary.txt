@@ -1,0 +1,5 @@
+Dictionary - nothing is ordered - everything has a value assigned to it. 
+
+Hash function - is any fnction that can be used to map data of arbitrary size to fixed size. 
+Crud - create retrieve update delete  (L) - listing
+mental model on all the actions you can take on a single record
