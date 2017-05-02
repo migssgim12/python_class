@@ -1,13 +1,21 @@
 """
-Kieran R Prasch
+Michael J Poehner
 
-Phonebook Example Solution
+Phonebook Solution
 
 """
+
+
 import chalk
 
 
 phonebook = dict()
+
+
+def leave():
+    print('Ok you decided to leave. Get out of here then. You are a loser anywayy')
+    quit()
+
 
 def add_person():
     add_in = input('Please enter a name >>')
@@ -50,21 +58,22 @@ def phone_book():
               Quit the application (enter 'quit')
               >>> '''
 
-    choice = None
-    while choice != 'quit':
+    options = {'quit': leave,
+               'list': list_people,
+               'add': add_person,
+               'get': retrieve,
+               'remove': remove_contact,
+               'update': update_contact
+               }
+
+    while True:
         choice = input(prompt).lower()
-        if choice == 'list':
-            list_people()
-        elif choice == 'add':
-            add_person()
-        elif choice == 'get':
-            retrieve()
-        elif choice == 'remove':
-            remove_contact()
-        elif choice == 'update':
-            update_contact()
-        else:
-            print('Ok you decided to  ' + choice + '. Get out of here then. You are a loser anyway')
+        try:
+            options[choice]()
+        except KeyError:
+            print('invalid choice')
+            continue
+
 
 def remove_contact():
     list_people()
@@ -74,16 +83,23 @@ def remove_contact():
     except KeyError:
         print(f'{to_remove} is not in the phonebook')
 
-#
+
 def update_contact():
     list_people()
     one_name = input('Who do you want to update?')
-    if one_name in phonebook[one_name]['Name']:
+
+    try:
+        exists = one_name in phonebook[one_name]['Name']
+    except KeyError:
+        print(f'{one_name} is not in the phonebook')
+        return update_contact()
+
+    if exists:
         change_name = input('What do you want to change, name or phone? ')
-        if change_name =='name':
+        if change_name == 'name':
             change_name2 = input('What do you want the name to change to? ')
             phonebook[one_name]['Name'] = change_name2
-        elif change_name =='phone':
+        elif change_name == 'phone':
             change_name3 = input('Phone number? ')
             phonebook[one_name]['Phone'] = change_name3
         else:
@@ -92,10 +108,5 @@ def update_contact():
     return one_name
 
 
-
-
-
-
-
-
-phone_book()
+if __name__ == '__main__':
+    phone_book()

@@ -14,5 +14,10 @@
 
 
 def fibo():
-    listy = []
+    fibonacci = []
 
+    former = 0
+    latter = 1
+
+while True:
+    former + latter = next
