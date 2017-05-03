@@ -13,16 +13,33 @@
 
 
 
-def fibo(ceiling):
-    fibonacci = []
-    former = 0
-    actual = 1
+# def fibo(ceiling):
+#     fibonacci = []
+#     former = 0
+#     actual = 1
+#
+#     while actual < ceiling:
+#         fibonacci.append(actual)
+#         former, actual = actual, former + actual
+#
+#
+#     print(fibonacci)
+#
+# fibo(10)
 
-    while former < ceiling:
-        fibonacci.append(former)
+
+
+def fibo():
+
+    former, actual = 0, 1
+
+    while True:
+        yield actual
         former, actual = actual, former + actual
 
 
-    return fibonacci
+
+my_gen = fibo()
 
 
+next(my_gen)
