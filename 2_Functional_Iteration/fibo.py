@@ -13,11 +13,16 @@
 
 
 
-def fibo():
+def fibo(ceiling):
     fibonacci = []
-
     former = 0
-    latter = 1
+    actual = 1
 
-while True:
-    former + latter = next
+    while former < ceiling:
+        fibonacci.append(former)
+        former, actual = actual, former + actual
+
+
+    return fibonacci
+
+

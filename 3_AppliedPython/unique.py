@@ -14,7 +14,7 @@
 2
 
 >>> unique(things, living_things)
-9
+8
 
 >>> common(things, living_things)
 2
@@ -34,3 +34,9 @@ def unique(items, *args):
     y = set(*args)
     x.update(y)
     print(len(x))
+
+def common(items, *args):
+    x = set(items)
+    y = set(*args)
+    a = y.intersection(x)
+    print(len(a))
