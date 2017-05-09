@@ -9,5 +9,6 @@ def palindrome(word):
         return True
     else:
         return False
+    print(rev)
 
 palindrome('anything')
