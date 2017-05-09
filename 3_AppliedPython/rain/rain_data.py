@@ -3,6 +3,8 @@ Rain data analysis
 
 """
 
+from bs4 import BeautifulSoup
+import requests
 import os
 
 BASE_DIR = '/home/migs/Documents/python_class/3_AppliedPython/rain'
