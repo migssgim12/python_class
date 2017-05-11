@@ -1,6 +1,6 @@
 """
 
-Account Class
+Account Class - skeleton for code
 
 """
 
@@ -21,19 +21,23 @@ class Account:
 
 
     def get_funds(self):
-        pass
+        return self._balance
 
-    def deposit(self, amount):
+
+    def deposit(self, amount: int):
         self._balance += amount
 
     def check_withdrawl(self, amount):
         if self._balance < amount:
             return False
         else:
-            return False
+            return True
+
+    def withdrawl(self, amount: int):
+        if self.check_withdrawl(amount):
+            self._balance -= amount
+        else:
+            raise ValueError("You don't have enough money!")
 
     def calc_interest(self):
-        pass
-
-x = Account('emu')
-x.deposit(233)
+        self.balance *= 0.01
