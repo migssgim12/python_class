@@ -4,10 +4,12 @@ Functions for the ATM program
 
 """
 
-from classes import Account
+from account_class import Account
+
 
 import sys, time
-act = Account
+act = Account  # This is a type annotations
+
 
 def slowdown_print(type_out):
     for letter in type_out:
@@ -17,16 +19,31 @@ def slowdown_print(type_out):
 
 
 def open_account():
-    prompt = input('Enter your name:  ')
-    account = Account(prompt)
-    print(f'Thanks {prompt}, you have created an account. \n')
-    type_out = ('Now choose from the following options: \n')
-    slowdown_print(type_out)
+    type_account = ['Checking', 'Savings']
+    prompt = input('Enter your name: \n ')
+    for index, type in enumerate(type_account, start=1):
+        print('Type ', index, 'for ', type)
+    while True:
+        try:
+            act_type = int(input('What type of account would you like?  \n'))
+            if act_type == 1:
+                act_type = type_account[0]
+            elif act_type == 2:
+                act_type = type_account[1]
+            balan = int(input('What would your initial balance be: \n'))
+            account = Account(name=prompt, account_type=act_type, _balance=balan)
+            print(f'Thanks {prompt}, you have created a an {act_type} Account, with a {balan} dollar balance. \n')
+            break
+        except ValueError:
+            print('Please enter a valid option. ')
+            continue
+
     return account
 
 
+
 def check_balance(account: act):
-        print(f'You have {account.get_funds()} dollars.')
+    print(f'You have {account.get_funds()} dollars.')
 
 
 
@@ -34,7 +51,8 @@ def deposit(account: act):
     amount = int(input('How much are you going to deposit?  '))
     account.deposit(amount)
     print(f'Now you have {account.get_funds()} dollars.')
-    
+
+
 
 
 def withdrawl(account: act):
@@ -49,11 +67,13 @@ def menu():
     prompt = "<<<------------------------------>>> \n"
     options = ['Open an Account', 'Check your Balance', 'Make a Deposit', 'Withdraw Funds']
 
+
     menu_options = {index: option for index, option in enumerate(options, start=1)}
 
     while True:
+        print('Please choose from the following options: \n')
         for index, option in menu_options.items():
-            print(f'<<Press {index} >> to  {option}')
+            print(f'<< Press {index} >> to  {option}: ')
 
         try:
             choice = int(input(prompt).lower())

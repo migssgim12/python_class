@@ -8,8 +8,6 @@ Michael Poehner
 
 import os
 
-
-
 BOOKS = '/home/migs/Documents/python_class/3_AppliedPython/Ari/books'
 
 
@@ -19,16 +17,19 @@ def get_data(path):
         return text
 
 
-def get_chars_words_lines(path: str):
+def strong_scrubber(raw: str) -> str:
+    pass
 
-    text = get_data(path)
 
+def get_chars_words_lines(text: str):
     n_words = len(text.split())
     n_chars = len(list(text))
     sentences = text.count('.')
     return n_words, n_chars, sentences
 
-a, b, c = get_chars_words_lines('')
+
+def calc_ari(words: int, chars: int, sents: int) -> int:
+    pass
 
 
 def show_menu():
@@ -38,7 +39,7 @@ def show_menu():
     paths = os.listdir(BOOKS)
     paths = [path for path in paths if '.txt' in path]
     menu = {i: text for i, text in enumerate(paths, start=1)}
-    menu2 ={}
+    menu2 = {}
 
     print('=======<<>><<>><<>>=======')
     for number, path in menu.items():
@@ -56,11 +57,16 @@ def show_menu():
         choice = menu[prompt]
         fullpath = os.path.join(BOOKS, choice)
         text = get_data(fullpath)
-        text2 = get_chars_words_lines(fullpath)
-        # print(text)
-        print(text2)
 
+        return text
+
+
+def do_it():
+    raw = show_menu()
+    # text = strong_scrubber(raw)
+    n_words, n_chars, sentences = get_chars_words_lines(text)
+    # score = calc_ari(n_words, n_chars, sentences)
+    x = get_chars_words_lines(text)
+    print(score)
 
 show_menu()
-
-
