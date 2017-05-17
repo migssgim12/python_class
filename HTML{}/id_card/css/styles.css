@@ -1,0 +1,18 @@
+.id_card {
+    margin-top: 50px;
+    margin-left: 50px;
+    background-color: #2ecc40;
+    border-radius: 30px;
+    padding: 10px 30px;
+    max-width: 30%;
+    position: absolute;
+
+
+}
+
+.positions ul {
+    list-style: none;
+    float: left;
+}
+
+
