@@ -5,7 +5,6 @@
 
 }
 #sidebar {
-  border: 1px solid black;
   width: 30%;
   height: 100%;
   background-color:black;
@@ -32,6 +31,7 @@
 }
  .links item {
   height: 20%;
+
   width: 85%;
   background-color: white;
   margin: 3px;
@@ -41,44 +41,59 @@
 }
 
 .right-side {
-  border: 1px solid black;
   width: 80vw;
-  height: 100vw;
+  height: 100vh;
   background-color:white;
   margin-left: 15px;
   margin-right: 15px;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
+  /*align-items: space-between;*/
+  justify-content: center;
 
 
 }
 
 #top_bar {
   background-color: black;
-  height: 5%;
+  height: 5%;;
   width: 25%;
   margin-top:60px;
   margin-left: 5%;
   margin-bottom: 2%;
 
-
 }
 
-#middle {
+#middle  {
   background-color: black;
-  border: 1px solid white;
   height: 55%;
   width: 90%;
   display:flex;
   align-self:center;
 }
 
+
 .three-boxes {
-  height: 20%;
-  width: 80%;
+  height: 20vw;
+  width: 90%;
+  margin-left: 40px;
   display: flex;
   flex-direction: row;
-  border: 1px solid white;
-  background-color: black;
-  margin: 5px;
+  background-color: white;
+
+
+
+}
+
+.three-boxes item  {
+  background-color:black;
+  height: 15vw;
+  width: 20vw;
+  margin: 15px;
+  border: 1px solid black;
+  display: flex;
+/*   margin-left: -1px;
+  margin-right: -1px; */
+
 }
