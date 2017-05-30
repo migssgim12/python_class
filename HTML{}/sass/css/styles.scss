@@ -1,0 +1,108 @@
+@import 'vars';
+
+@mixin big-text($font-color) {
+  font-size: 2em;
+  border: dashed 20px;
+  color: $font-color;
+}
+
+@each $i in map-keys($colors) {
+  ul li:nth-child(#{$i}) {
+    $current-color:map_get($colors, $i);
+    color:$current-color;
+  }
+}
+
+@while $num < 8 {
+  .while-#{$num} {
+    background: darken($bg-color, $num + 10);
+    $num: $num + 1
+  }
+}
+
+@for $i from 1 through length($shoes) {
+  ul {
+    background:$bg-color;
+    li:nth-child(#{$i}):before {
+      content: nth($shoes, $i);
+    }
+  }
+}
+
+
+
+h1 {
+  background: $bg-color;
+  @include big-text(#666);
+}
+
+p {
+  background:$bg-color;
+
+}
+
+
+div p:nth-child(odd){
+  background: #2F4858;
+  @include big-text(#666);
+
+}
+main {
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+
+  section {
+    padding: 3em;
+    height: 50px;
+    width: 30px;
+    background: #0ea432;
+    border: dashed 3px;
+    display:flex;
+  }
+  div {
+    @extend section;
+    &:hover{
+      background: #1ebc30;
+      display:flex;
+
+    }
+  }
+  article {
+    @extend section;
+    display:flex;
+  }
+}
+
+div {
+  color: #EF8354;
+  &:before {
+    content: nth($shoes, 2);
+  }
+  a {
+    color: #333;
+
+    &:hover {
+    background: green;
+      @include big-text(#330066)
+    }
+  }
+  p {
+    color: #666;
+ }
+}
+
+
+
+
+//@mixin big-text($font-type) {
+//  border:solid 3px #333;
+//  background: #84DCC6;
+//  @if $font-type == true {
+//    font-size: 5em;
+//    color: ##996633;
+//    @else {
+//    font-size: 3em;
+//    color: #2F4858;
+//  }
+//  }

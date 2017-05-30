@@ -1,0 +1,114 @@
+ul li:nth-child(1) {
+  color: #eee; }
+
+ul li:nth-child(2) {
+  color: #ddd; }
+
+ul li:nth-child(3) {
+  color: #9933cc; }
+
+ul li:nth-child(4) {
+  color: #4c33cc; }
+
+ul li:nth-child(5) {
+  color: #cc3366; }
+
+ul li:nth-child(6) {
+  color: #ffff99; }
+
+.while-0 {
+  background: #dcdc12; }
+
+.while-1 {
+  background: #d7d712; }
+
+.while-2 {
+  background: #d2d212; }
+
+.while-3 {
+  background: #cece11; }
+
+.while-4 {
+  background: #c9c911; }
+
+.while-5 {
+  background: #c4c410; }
+
+.while-6 {
+  background: #bfbf10; }
+
+.while-7 {
+  background: #bbbb10; }
+
+ul {
+  background: #ee3; }
+  ul li:nth-child(1):before {
+    content: "heels"; }
+
+ul {
+  background: #ee3; }
+  ul li:nth-child(2):before {
+    content: "boots"; }
+
+ul {
+  background: #ee3; }
+  ul li:nth-child(3):before {
+    content: "tennis"; }
+
+ul {
+  background: #ee3; }
+  ul li:nth-child(4):before {
+    content: "running"; }
+
+ul {
+  background: #ee3; }
+  ul li:nth-child(5):before {
+    content: "sandals"; }
+
+h1 {
+  background: #ee3;
+  font-size: 2em;
+  border: dashed 20px;
+  color: #666; }
+
+p {
+  background: #ee3; }
+
+div p:nth-child(odd) {
+  background: #2F4858;
+  font-size: 2em;
+  border: dashed 20px;
+  color: #666; }
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+  main section, main div, main article {
+    padding: 3em;
+    height: 50px;
+    width: 30px;
+    background: #0ea432;
+    border: dashed 3px;
+    display: flex; }
+  main div:hover {
+    background: #1ebc30;
+    display: flex; }
+  main article {
+    display: flex; }
+
+div {
+  color: #EF8354; }
+  div:before {
+    content: "boots"; }
+  div a {
+    color: #333; }
+    div a:hover {
+      background: green;
+      font-size: 2em;
+      border: dashed 20px;
+      color: #330066; }
+  div p {
+    color: #666; }
+
+/*# sourceMappingURL=styles.css.map */

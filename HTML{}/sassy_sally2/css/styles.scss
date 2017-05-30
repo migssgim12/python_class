@@ -1,0 +1,68 @@
+@import 'vars';
+
+@mixin img-dimensions() {
+  height: 7em;
+  width: 10em;
+  background-size: cover;
+}
+
+@mixin flex-row() {
+  display:flex;
+  justify-content: space-around;
+  flex-direction:row;
+}
+
+@mixin flex-center() {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+}
+
+@mixin grey-wrapper() {
+  margin:20px;
+  background: #efefef;
+  padding:10px;
+  border-radius:20px;
+}
+
+@for $i from 1 through length($images) {
+  ul  {
+    li:nth-child(#{$i}) {
+      background: url(nth($images, $i));
+      @include img-dimensions;
+    }
+  }
+}
+
+header {
+  height: 80vh;
+  @include flex-center;
+  background:#9c27b0;
+  color:#ffffff;
+}
+
+.project-list div h2 {
+  text-align:center;
+}
+ul {
+   @include flex-row;
+   list-style:none;
+  li {
+    border: solid 3px;
+  }
+
+}
+
+section article, div {
+  @include grey-wrapper();
+}
+
+footer {
+  height: 80vh;
+  @include flex-center;
+  background:#2196f3;
+  color:#ffffff;
+
+}
+
