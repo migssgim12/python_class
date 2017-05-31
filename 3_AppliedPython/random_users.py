@@ -7,7 +7,7 @@ import requests
 
 
 def get_users():
-    response = requests.get('http://api.randomuser.me/?results=5')
+    response = requests.get('http://api.randomuser.me/?results=500')
     users = response.json().get('results')
     return users
 

@@ -7,16 +7,27 @@ message = "Ohg, bssvpre, V qvqa'g pngpu gurfr -- gurl ner zl crg svfu naq V whfg
 
 # Write your code here.
 
+import string
+alphabet = string.ascii_lowercase + string.whitespace + string.punctuation
+cesar13 = alphabet[13:25] + alphabet[0:13] + string.whitespace + string.punctuation
 
 
-alphabet = 'abcdefghijklmnopqrstuvwxyz' # this is the alphabet
-codex =    'nopqrstuvwxyzabcdefghijklm'
-message = "Ohg, bssvpre, V qvqa'g pngpu gurfr -- gurl ner zl crg svfu naq V whfg\
- oevat gurz urer gb fjvz. Jura gurl'er qbar gurl whzc onpx vagb gur ohpxrg."
-for char in message:
-    position = codex.index(char)
-    decrypted = alphabet[position]
-    print(decrypted)
+# message = "Ohg, bssvpre, V qvqa'g pngpu gurfr -- gurl ner zl crg svfu naq V whfg\
+# oevat gurz urer gb fjvz. Jura gurl'er qbar gurl whzc onpx vagb gur ohpxrg.".lower()
+message = "jka sj ldfj"
+
+
+def decrypt(message):
+    result = []
+    for char in message:
+        position = cesar13.index(char)
+        print(position)
+        decrypted = alphabet[position]
+        print(decrypted)
+        result.append(decrypted)
+
+    print("".join(result))
+
 
  
 decrypt(message)
