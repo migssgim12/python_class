@@ -1,0 +1,11 @@
+.myclass {
+  list-style: none;
+}
+#list {
+  margin-top: 40px;
+  padding:inherit;
+}
+
+.form-group h2 {
+  text-align: center;
+}
