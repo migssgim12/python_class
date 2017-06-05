@@ -6,7 +6,7 @@ function addBox(title, firstName, lastName, dob, email, picture) {
   $addBox.append(title, firstName, lastName, dob, email, $image);
   $addBox.on('click', function(event){
   });
-  console.log(`'name: + ' {$firstName} ' ' + {$lastName}`)
+  console.log(`Name: ${firstName}`);
   $('#userbox').append($addBox);
 }
 
