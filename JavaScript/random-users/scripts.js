@@ -3,12 +3,15 @@
 function addBox(title, firstName, lastName, dob, email, picture) {
   var $addBox = $('<div>', {'class': 'user'});
   var $image = $('<img>').attr('src', picture);
-  $addBox.append(title, firstName, lastName, dob, email, $image);
+  $addBox.append(`Name: ${title} ${firstName} ${lastName}
+
+  Date of Birth: ${dob}  Email ${email}`);
+
   $addBox.on('click', function(event){
   });
   console.log(`Name: ${firstName}`);
-  $('#userbox').append($addBox);
-}
+  $('#userbox').append($image, $addBox);
+};
 
 function sifter(data){
   $.each(data.results, function(index, user) {

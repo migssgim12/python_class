@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Playing with sass!</title>
-  <link rel="stylesheet" media="screen" href="css/styles.css">
-  </head>
+<meta charset="utf-8">
+ <title>Playing with sass!</title>
+ <link rel="stylesheet" media="screen" href="css/styles.css">
+</head>
 <body>
  <header>
-    <h1>Lorem ipsum</h1>
-    <h2>Duis autem vel eum iriure dolor in hendrerit.</h2>
+  <h1>Lorem ipsum</h1>
+  <h2>Duis autem vel eum iriure dolor in hendrerit.</h2>
  </header>
  <section class="project-list">
 	 <div>

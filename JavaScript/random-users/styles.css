@@ -9,21 +9,34 @@
   background-color: rgb(110, 94, 238);
   margin: 20px;
 }
-.user {
-  height:200px;
-  width:550px;
-  margin: 20px 20px;
-  /*border: .15px solid blue;*/
-  border-radius: 3em;
-  box-shadow: 2px 2px 2px 3px;
-  background-color: rgb(238, 244, 231);
-  text-align: center;
 
+#userbox {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: space-between;
+flex-wrap: wrap;
 
 }
-.container {
-  display:flex;
+
+
+.user {
+  width:550px;
+  height:150px;
+  margin: 20px 20px;
+  /*border: .15px solid blue;*/
+  border-radius: 1.5em;
+  box-shadow: 2px 2px 2px 3px;
+  background-color: rgb(238, 244, 231);
+  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  flex-wrap:wrap;
+
+}
+
+.container{
+display: flex;
+flex-direction: column;
+align-self: flex-start;
+justify-content: center;
 }
