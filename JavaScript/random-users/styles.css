@@ -1,42 +1,67 @@
+@font-face {
+  font-family: ghostmea;
+  src:url(FontCollection/lmmonoproplt10-boldoblique.otf);
+}
+
+
 #generate {
   border:.015px blue;
   height:35px;
   width: 150px;
   font-family: cursive;
+  font-size: .9em;
+  font-weight: bold;
   border-radius: 32px;
   color:white;
-  font-weight: bold;
+  /*font-weight: bold;*/
   background-color: rgb(110, 94, 238);
-  margin: 20px;
+  margin: 20px 20px 20px 40px;
 }
 
 #userbox {
 display: flex;
 flex-direction: column;
-align-items: flex-start;
-justify-content: space-between;
+align-items: flex-end;
+align-content: center;
+justify-content: center;
 flex-wrap: wrap;
+padding: 15px;
 
 }
 
 
 .user {
-  width:550px;
-  height:150px;
+  width:500px;
+  height:100px;
   margin: 20px 20px;
-  /*border: .15px solid blue;*/
-  border-radius: 1.5em;
+  padding: 7px;
+  border-radius: 20px;
   box-shadow: 2px 2px 2px 3px;
   background-color: rgb(238, 244, 231);
   display: flex;
-  flex-direction: column;
-  flex-wrap:wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family:ghostmea;
+  font-size: 1.3em;
+  word-spacing: 2px;
 
 }
 
 .container{
 display: flex;
 flex-direction: column;
+align-items: flex-start;
 align-self: flex-start;
-justify-content: center;
+justify-content: flex-start;
+}
+
+img {
+  min-width: 80px;
+  height: 80px;
+  border-radius:20px;
+  box-shadow: 2px 2px 2px 2px;
+  display: flex;
+  align-self: flex-start;
+
+
 }

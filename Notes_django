@@ -1,0 +1,13 @@
+Notes with Django
+
+We have a database that we want to expose to the public
+Databases are a series of tables 
+
+dunder init
+ajax functions
+
+You don't need a dunder init
+no repr 
+but you do need a str
+
+everytime you alter the schema change in your database you need to gnerate a migration
